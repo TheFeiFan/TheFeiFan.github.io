@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>仿制药市场份额与下一季度预测 | 黄宇飞</title>
+<meta name="description" content="仿制药金额份额的时间变化、关联因素与下一季度预测。黄宇飞，2026。">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a href="#main" class="skip">跳到正文</a>
+<header class="site-header"><nav class="nav-wrap" aria-label="主导航"><a class="brand" href="../">Yufei Huang</a><div><a href="../">主页</a><a href="../#research">研究方向</a><a href="./" aria-current="page">研究项目</a></div></nav></header>
+<main id="main" class="paper numbers">
+<header class="paper-header"><h1>仿制药市场份额的变化与关联因素<br>及下一季度份额预测</h1><p class="authors"><a href="../">黄宇飞</a></p><p class="affiliation">药学院 · 药事管理与临床药学系</p><p class="paper-year">2026</p></header>
+<section id="abstract"><h2>摘要</h2><p>基于 2016Q1–2024Q4 的药品季度数据，分析仿制药金额份额的变化及相关因素，并开展下一季度预测。份额分析纳入 141 个药品组合的 1,870 条记录。固定 51 药的季度份额中位数由 26.77% 升至 67.48%。双固定效应模型中，企业数及费用比的检验 P 值分别为 0.409 和 0.098。2024 年测试中，前值基准的 MAE 最低，为 3.55 个百分点；岭回归的 RMSE 最低，为 6.48 个百分点。</p></section>
+<section id="methods"><h2>数据与方法</h2><p>数据来自药学会数据库，共 20,067 条原始明细、275 个药品组合。筛选后纳入 142 个组合、12,083 条明细，其中 141 个组合有可计算的金额份额。金额份额为仿制药净金额占原研药与仿制药净金额合计的比例。</p><p>采用描述性统计和固定样本分析考察份额变化。关联模型控制药品与季度固定效应，标准误按药品聚类。预测分析形成 1,719 个相邻季度配对，训练、验证和测试分别使用截至 2022 年、2023 年及 2024 年的目标季度数据，配对数为 872、390 和 457。</p><details><summary>模型设置</summary><p>预测特征包括本季份额、最近份额变化、企业数、对数市场金额、费用比、观察时长和季度。岭回归 α＝1；随机森林包含 300 棵树，最大深度 6，叶节点最小样本数 8。按 2023 年验证 MAE 选择模型，在 2024 年进行逐季度一步预测。</p></details></section>
+<section id="results"><h2>结果</h2>
+<h3>份额变化</h3><p>全样本金额份额中位数为 28.99%，四分位区间为 6.32%–61.49%。2021Q1–2024Q4 连续观察的 51 个组合共 816 条记录，其季度份额中位数由 26.77% 升至 67.48%。同期全样本季度中位数由 27.15% 升至 37.11%。</p>
+<figure class="chart-frame"><div class="chart-controls"><p>季度金额份额中位数</p><div class="switches" role="group" aria-label="趋势样本"><button type="button" data-cohort="both" aria-pressed="true">两组对照</button><button type="button" data-cohort="all" aria-pressed="false">当季全样本</button><button type="button" data-cohort="balanced" aria-pressed="false">固定 51 药</button></div></div><div class="legend"><span><i style="background:#94070A"></i>当季全样本</span><span><i style="background:#b47a46"></i>固定 51 药</span></div><div id="cohort-chart" class="chart"></div><figcaption id="cohort-summary" aria-live="polite"></figcaption><noscript><img src="../assets/all-sample-trend.png" alt="全样本与固定51药的季度份额趋势"></noscript></figure>
+<details class="supplement"><summary>三药份额趋势</summary><div class="chart-frame"><div class="chart-controls"><p>2021Q1–2024Q4</p><label for="drug-select">药品 <select id="drug-select"><option value="利伐沙班 片剂">利伐沙班片剂</option><option value="替格瑞洛 片剂">替格瑞洛片剂</option><option value="依折麦布 片剂">依折麦布片剂</option></select></label></div><div id="drug-chart" class="chart"></div><p id="drug-summary" class="chart-summary" aria-live="polite"></p><noscript><img src="../assets/three-drugs.png" alt="三种药品季度份额趋势"></noscript></div></details>
+<h3 id="association">关联分析</h3><p>药品层面份额与企业数的 Spearman 相关系数为 0.530。企业数系数在季度调整模型中为 3.13，加入药品固定效应后为 −0.60。主模型估计如下。</p>
+<div class="table-wrap"><table><caption>双固定效应模型，n＝1,870；份额单位为百分点</caption><thead><tr><th>变量对比</th><th>估计值</th><th>95% 置信区间</th><th>P 值</th></tr></thead><tbody><tr><td>企业数增加 1 家</td><td>−0.60</td><td>[−2.05, 0.84]</td><td>0.409</td></tr><tr><td>费用比减半</td><td>3.70</td><td>[−0.70, 8.11]</td><td>0.098</td></tr></tbody></table></div>
+<h3 id="prediction">预测评估</h3><p>前值基准的验证 MAE 最低，据此选为主要预测方案。2024 年测试结果见下表。药品等权 MAE 为 3.60、4.26 和 4.19 个百分点，模型排序与记录等权结果一致。</p>
+<div class="table-wrap"><table><caption>2024 年测试结果，n＝457；误差单位为百分点</caption><thead><tr><th>模型</th><th>MAE</th><th>RMSE</th><th>R²</th></tr></thead><tbody><tr><td>前值基准</td><td><strong>3.55</strong></td><td>6.63</td><td>0.9550</td></tr><tr><td>岭回归</td><td>4.12</td><td><strong>6.48</strong></td><td>0.9570</td></tr><tr><td>随机森林</td><td>4.07</td><td>6.71</td><td>0.9539</td></tr></tbody></table></div>
+<figure class="chart-frame"><div class="chart-controls"><p>2024 年测试误差</p><div class="switches" role="group" aria-label="预测误差指标"><button type="button" data-metric="mae" aria-pressed="true">MAE</button><button type="button" data-metric="rmse" aria-pressed="false">RMSE</button></div></div><div id="model-chart" class="chart"></div><figcaption id="model-summary" aria-live="polite"></figcaption></figure>
+<p>基准 MAE 的药品聚类自助抽样 95% 区间为 2.90–4.28 个百分点。验证集置换分析中，打乱本季份额后，岭回归与随机森林的 MAE 分别增加 29.01 和 28.80 个百分点，其余变量的平均变化均小于 0.30 个百分点。</p>
+</section>
+<section id="conclusion"><h2>结论</h2><p>仿制药份额在药品之间存在差异，固定样本的季度中位数随时间上升。药品固定效应的引入改变了企业数与份额的估计关系。当前份额是下一季度预测的主要信息来源；前值基准的平均绝对误差最低，岭回归的均方根误差最低。</p></section>
+<footer><a href="../">黄宇飞 · 个人主页</a><span>Last update: 2026/10</span></footer>
+</main>
+<script src="../assets/data.js"></script><script src="../assets/charts.js"></script>
+</body></html>
